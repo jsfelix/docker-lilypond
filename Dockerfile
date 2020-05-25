@@ -6,5 +6,8 @@ RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* 
 ENV LANG en_US.utf8
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update && apt-get install -y wget
 
-RUN apt-get update && apt-get -y install lilypond
+RUN wget https://lilypond.org/download/binaries/linux-64/lilypond-2.21.1-1.linux-64.sh
+
+RUN sh lilypond-2.21.1-1.linux-64.sh
