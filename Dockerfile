@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER Kyle Baldwin <kwb@mail.sfsu.edu>
 
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
@@ -8,6 +8,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y wget
 
-RUN wget https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
+RUN wget https://lilypond.org/download/binaries/linux-64/lilypond-2.22.1-1.linux-64.sh
 
-RUN sh lilypond-2.20.0-1.linux-64.sh
+RUN sh lilypond-2.22.1-1.linux-64.sh
